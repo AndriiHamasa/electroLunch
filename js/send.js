@@ -30,12 +30,17 @@ form.addEventListener("submit", async (e) => {
   const comment = form.querySelector('select[name="comment"]').value;
   const name = form.querySelector('input[name="name"]').value;
   const phone = form.querySelector('input[name="phone"]').value;
+  const post = form.querySelector('input[name="post"]').value;
+  const city = form.querySelector('input[name="city"]').value;
+
 
   const formData = {
     tovar: "Електричний ланч",
     comment,
     name,
     phone,
+    post,
+    city
   };
 
   await sendRequest(formData)
